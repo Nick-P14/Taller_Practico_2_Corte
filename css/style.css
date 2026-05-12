@@ -1,0 +1,244 @@
+/* ===================== GENERAL ===================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    color: #333;
+    background-color: #fff;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* ===================== TOPBAR ===================== */
+.topbar {
+    background-color: #212529;
+    padding: 8px 0;
+    color: #fff;
+    font-size: 14px;
+}
+
+.topbar a {
+    color: #ccc;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.topbar a:hover {
+    color: #fff;
+}
+
+.topbar i {
+    margin-right: 5px;
+}
+
+/* ===================== BRANDING / NAVBAR ===================== */
+.branding {
+    background-color: #fff;
+    padding: 12px 0;
+    border-bottom: 2px solid #e0e0e0;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.sitename {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #0d6efd;
+    margin: 0;
+    letter-spacing: 1px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 24px;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: color 0.3s;
+}
+
+nav ul a:hover,
+nav ul a.active {
+    color: #0d6efd;
+}
+
+/* ===================== SECCIONES ===================== */
+.section {
+    padding: 60px 0;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.section-title h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #212529;
+    margin-bottom: 8px;
+}
+
+.section-title p {
+    color: #666;
+    font-size: 1rem;
+}
+
+/* ===================== BOTONES ===================== */
+.btn {
+    border-radius: 6px;
+    font-weight: 500;
+    transition: all 0.3s;
+}
+
+/* ===================== DIV AGREGAR EMPLEADO ===================== */
+#divAgregarEmpleado {
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+#divAgregarEmpleado h4 {
+    color: #0d6efd;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #0d6efd;
+    padding-bottom: 8px;
+}
+
+/* ===================== TABLA ===================== */
+#tablaEmpleados thead th {
+    font-size: 0.85rem;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+#tablaEmpleados tbody tr {
+    transition: background-color 0.2s;
+}
+
+#tablaEmpleados tbody td {
+    vertical-align: middle;
+    font-size: 0.9rem;
+}
+
+.fila-total {
+    font-weight: bold;
+    background-color: #d4edda !important;
+    color: #155724;
+    font-size: 0.95rem;
+}
+
+/* ===================== MEMBER CARD ===================== */
+.member-card {
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    text-align: center;
+    padding: 24px 16px;
+    background-color: #fff;
+    transition: box-shadow 0.3s, transform 0.3s;
+}
+
+.member-card:hover {
+    box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+    transform: translateY(-4px);
+}
+
+.member-card img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 14px;
+    border: 3px solid #0d6efd;
+}
+
+.member-name {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.member-role {
+    color: #0d6efd;
+    font-size: 0.85rem;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.member-bio {
+    font-size: 0.85rem;
+    color: #666;
+    margin-bottom: 12px;
+}
+
+.member-socials a {
+    color: #555;
+    margin: 0 5px;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+.member-socials a:hover {
+    color: #0d6efd;
+}
+
+/* ===================== MODALES ===================== */
+.modal-header.bg-warning .modal-title {
+    color: #212529;
+}
+
+.modal-header.bg-success .modal-title {
+    color: #fff;
+}
+
+/* ===================== FOOTER ===================== */
+footer {
+    background-color: #212529;
+    color: #aaa;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+footer strong {
+    color: #fff;
+}
+
+/* ===================== RESPONSIVE ===================== */
+@media (max-width: 768px) {
+    .sitename {
+        font-size: 1.3rem;
+    }
+
+    nav ul {
+        gap: 14px;
+    }
+
+    .section {
+        padding: 40px 0;
+    }
+
+    .section-title h2 {
+        font-size: 1.5rem;
+    }
+
+    #tablaEmpleados thead th,
+    #tablaEmpleados tbody td {
+        font-size: 0.78rem;
+    }
+}
