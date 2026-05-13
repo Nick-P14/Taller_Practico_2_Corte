@@ -68,7 +68,7 @@ function renderTabla() {
     const tbody = document.querySelector("#tablaEmpleados tbody");
     tbody.innerHTML = "";
 
-    lista.filter(emp => emp.sueldoTotal !== undefined).forEach((emp, index) => {
+    lista.filter(emp => emp.sueldoTotal !== undefined).forEach((emp, index) => {    
         const fila = document.createElement("tr");
         fila.innerHTML = `
             <td>${index + 1}.</td>
