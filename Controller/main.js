@@ -1,4 +1,4 @@
-// ===================== UTILIDADES =====================
+
 
 function obtenerEmpleados() {
     return JSON.parse(localStorage.getItem("empleados")) || [];
@@ -8,14 +8,13 @@ function guardarEmpleados(lista) {
     localStorage.setItem("empleados", JSON.stringify(lista));
 }
 
-// ===================== MOSTRAR/OCULTAR FORM =====================
+
 
 function crearEmpleado() {
     const div = document.getElementById("divAgregarEmpleado");
     div.style.display = div.style.display === "none" || div.style.display === "" ? "block" : "none";
 }
 
-// ===================== CREAR =====================
 
 function agregarEmpleado() {
     const cc              = document.getElementById("cc").value.trim();
@@ -62,14 +61,14 @@ function agregarEmpleado() {
     renderTabla();
 }
 
-// ===================== LEER / RENDERIZAR =====================
+
 
 function renderTabla() {
     const lista = obtenerEmpleados();
     const tbody = document.querySelector("#tablaEmpleados tbody");
     tbody.innerHTML = "";
 
-    lista.forEach((emp, index) => {
+    lista.filter(emp => emp.sueldoTotal !== undefined).forEach((emp, index) => {
         const fila = document.createElement("tr");
         fila.innerHTML = `
             <td>${index + 1}.</td>
@@ -98,13 +97,13 @@ function renderTabla() {
     tbody.appendChild(filaTotal);
 }
 
-// ===================== TOTAL NÓMINA =====================
+
 
 function hallarTotalNomina(lista) {
     return lista.reduce((acc, emp) => acc + emp.sueldoTotal, 0);
 }
 
-// ===================== ELIMINAR =====================
+
 
 function eliminarEmpleado(cc) {
     if (!confirm("¿Estás seguro de eliminar este empleado?")) return;
@@ -114,7 +113,7 @@ function eliminarEmpleado(cc) {
     renderTabla();
 }
 
-// ===================== ACTUALIZAR =====================
+
 
 function abrirModalActualizar(cc) {
     const lista = obtenerEmpleados();
@@ -199,9 +198,8 @@ function buscarEmpleado() {
     `).join("");
 }
 
-// ===================== INICIALIZAR =====================
 
 document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("divAgregarEmpleado").style.display = "none";
     renderTabla();
-});
+}); 
